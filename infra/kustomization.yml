@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
 - deployment.yml
 - service.yml
-namespace: argo-app
+namespace: default
 images:
 - name: argo-app
   newName: 13612262974/argo-app
