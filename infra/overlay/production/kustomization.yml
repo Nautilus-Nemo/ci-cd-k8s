@@ -3,7 +3,7 @@ kind: Kustomization
 commonLabels:
   variant: prod 
 resources:
-  - ../..
+  - ../../base
 patches:
   - path: replica_count.yml 
   - path: cpu_count.yml
