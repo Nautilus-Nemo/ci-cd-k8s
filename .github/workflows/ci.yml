@@ -48,13 +48,12 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -am "rolling image to tag $GITHUB_SHA"
-  
-      # You may pin to the exact commit or the version.
-      # uses: kceb/pull-request-url-action@aeb30aa981bc0993004baaecc763ee352ec3982a
-    - name: pull remote 
-      uses: kceb/pull-request-url-action@v2
+
+    - name: Rebase Pulls
+      uses: peter-evans/rebase@v3.0.0
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ github.token }}
+        repository:  ${{ github.repository }}
           
     - name: Push changes
       uses: ad-m/github-push-action@master
