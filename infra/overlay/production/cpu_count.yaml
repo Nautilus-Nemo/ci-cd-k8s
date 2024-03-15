@@ -1,0 +1,13 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: argo-app
+spec: 
+ template:
+    spec:
+      containers: 
+        - name: argo-app
+          resources:
+            limits: 
+              memory: "128Mi" 
+              cpu: "7000m" 
