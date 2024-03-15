@@ -1,1 +1,10 @@
-
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- deployment.yml
+- service.yml
+namespace: default
+images:
+- name: argo-app
+  newName: 13612262974/argo-app
+  newTag: 578dcc7ec8d955936adecbd0e194c45f8593694c
