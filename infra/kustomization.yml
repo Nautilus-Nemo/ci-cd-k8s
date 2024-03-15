@@ -7,4 +7,4 @@ namespace: default
 images:
 - name: argo-app
   newName: 13612262974/argo-app
-  newTag: fa07e31530148eff1f7a71b2a24289bbdfda5312
+  newTag: 578dcc7ec8d955936adecbd0e194c45f8593694c
