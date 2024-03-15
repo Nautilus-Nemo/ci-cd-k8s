@@ -1,11 +1,9 @@
-# 文件路径 demo/overlays/production/kustomization.yaml
-namePrefix: production-
+apiVersion: apps/v1
+kind: Kustomization
 commonLabels:
-  variant: production
-  org: acmeCorporation
-commonAnnotations:
-  note: Hello, I am production!
-bases:
-- ../..
-patchesStrategicMerge:
-- deployment.yaml
+  variant: prod 
+resources:
+  - ../..
+patches:
+  - path: replica_count.yaml 
+  - path: cpu_count.yaml
