@@ -1,1 +1,11 @@
-
+# 文件路径 demo/overlays/production/kustomization.yaml
+namePrefix: production-
+commonLabels:
+  variant: production
+  org: acmeCorporation
+commonAnnotations:
+  note: Hello, I am production!
+bases:
+- ../..
+patchesStrategicMerge:
+- deployment.yaml
